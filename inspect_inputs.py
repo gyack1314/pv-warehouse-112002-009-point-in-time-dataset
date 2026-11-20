@@ -1,4 +1,4 @@
-"""Check names, structure and cross-references of the local input pack."""
+"""检查本地资料包的结构、文件完整性和表间引用。"""
 from __future__ import annotations
 
 import argparse
