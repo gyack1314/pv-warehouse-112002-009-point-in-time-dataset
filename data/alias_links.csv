@@ -1,0 +1,6 @@
+alias,physical_site,shared_asset,from_day,to_day,known_at,rev
+P-A,A,X1,01,30,16 00:00,1
+P-B,B,X2,01,30,16 00:00,1
+P-C,C,X3,01,30,16 00:00,1
+P-D,D,X4,01,30,16 00:00,1
+P-C,C,X1,18,30,21 00:00,2

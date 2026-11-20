@@ -1,0 +1,5 @@
+request,cutoff,split_by_decision_at,train_aliases,holdout_aliases,purpose
+P1,20 10:00,19 00:00,P-A;P-B,P-C;P-D,planning
+P2,21 10:00,19 00:00,P-A;P-B,P-C;P-D,planning
+P3,21 12:00,19 00:00,P-A;P-B,P-C;P-D,planning
+P4,21 12:00,19 00:00,P-A;P-B,P-C;P-D,calibration

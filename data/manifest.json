@@ -1,0 +1,103 @@
+{
+  "pack": "point-in-time-dataset",
+  "tables": {
+    "decision_windows": {
+      "columns": [
+        "case_id",
+        "alias",
+        "decided_at",
+        "target_from",
+        "target_to"
+      ],
+      "rows": 5,
+      "sha256": "bd40e339288564a288ee23b4da0909f3f2dc0a571d253f7de67f1da37a36c7eb"
+    },
+    "alias_links": {
+      "columns": [
+        "alias",
+        "physical_site",
+        "shared_asset",
+        "from_day",
+        "to_day",
+        "known_at",
+        "rev"
+      ],
+      "rows": 5,
+      "sha256": "fd6a7a77a0b665bc04c255c8b6a2c5d1911a7d86c80aa6cda884e9daaa8d029a"
+    },
+    "forecasts": {
+      "columns": [
+        "physical_site",
+        "target_from",
+        "target_to",
+        "run_id",
+        "issued_at",
+        "available_at",
+        "field",
+        "value"
+      ],
+      "rows": 13,
+      "sha256": "1a7834af24417a32f07efba3ff39c10e00789330cdc2700a4aecd77f0c09bce8"
+    },
+    "labels": {
+      "columns": [
+        "site",
+        "target_from",
+        "target_to",
+        "observed_from",
+        "observed_to",
+        "known_at",
+        "rev",
+        "quality",
+        "mwh"
+      ],
+      "rows": 6,
+      "sha256": "3b4b30fa3914a385a58165e05806a60f61e3e2fceb756e44d85f2c759e0b2ee5"
+    },
+    "publication_intents": {
+      "columns": [
+        "request",
+        "cutoff",
+        "split_by_decision_at",
+        "train_aliases",
+        "holdout_aliases",
+        "purpose"
+      ],
+      "rows": 4,
+      "sha256": "957c040ea6d7fda3423da38de113d3692fcf0e56b0c86d26abeccc2da2d1d9c4"
+    },
+    "withdrawals": {
+      "columns": [
+        "known_at",
+        "site",
+        "target_from",
+        "target_to",
+        "scope",
+        "purpose",
+        "allowed_retention"
+      ],
+      "rows": 1,
+      "sha256": "49f43d4d2df7ab7d2e688eb70a5c25195a95ecfa78e931e930195a1b63900556"
+    }
+  },
+  "references": [
+    [
+      "decision_windows",
+      "alias",
+      "alias_links",
+      "alias"
+    ],
+    [
+      "forecasts",
+      "physical_site",
+      "alias_links",
+      "physical_site"
+    ],
+    [
+      "withdrawals",
+      "site",
+      "labels",
+      "site"
+    ]
+  ]
+}
